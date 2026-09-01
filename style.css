@@ -196,10 +196,19 @@ header { display: flex; justify-content: space-between; align-items: center; pad
 .style-1 img { border-radius: 150px 20px 20px 20px; }
 .style-2 img { border-radius: 20px 150px 20px 20px; }
 
-/* 배경이 투명한 제품 이미지 — 그림자·모서리 없이 섹션 배경에 그대로 얹힘 */
+/* 배경이 투명한 제품 이미지 — 테두리(카드)는 바깥 박스가 맡고,
+   이미지 자체는 그림자·모서리 없이 그 위에 얹힘 */
+.img-box.transparent {
+    background-color: var(--box-bg);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+.img-box.transparent.style-1 { border-radius: 150px 20px 20px 20px; }
+.img-box.transparent.style-2 { border-radius: 20px 150px 20px 20px; }
 .img-box.transparent img,
 .img-box.transparent.style-1 img,
-.img-box.transparent.style-2 img { object-fit: contain; box-shadow: none; border-radius: 0; background: none; }
+.img-box.transparent.style-2 img { object-fit: contain; box-shadow: none; border-radius: 0; background: none; display: block; }
 
 .philosophy-box { background-color: var(--box-bg); padding: 70px 60px; border-radius: 30px; box-shadow: 0 15px 40px rgba(0,0,0,0.06); text-align: center; }
 .quote-top, .quote-bottom { font-size: 60px; color: var(--main-orange); line-height: 0.8; display: block; font-family: Georgia, serif; }
