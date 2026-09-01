@@ -141,7 +141,7 @@ header { display: flex; justify-content: space-between; align-items: center; pad
 /* ========================================================= */
 .subjects-grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     border: 1px solid var(--border-color);
     background-color: var(--box-bg);
     width: 100%;
@@ -158,8 +158,8 @@ header { display: flex; justify-content: space-between; align-items: center; pad
     box-sizing: border-box;
 }
 
-.subject-item:nth-child(4n) { border-right: none; }
-.subject-item:nth-child(n+9) { border-bottom: none; }
+.subject-item:nth-child(3n) { border-right: none; }
+.subject-item:nth-child(n+10) { border-bottom: none; }
 
 .subject-icon {
     width: 45px;
